@@ -7,7 +7,7 @@ void keyPressed(){
 void rendering() {
   for (float y = 0; y < height; y += a) {
     for (float x = 0; x < width; x += a) {      
-      newY = (int)y/a;//Зачем повторять дни и теже вычисления 100 раз
+      newY = (int)y/a;//Зачем повторять одни и теже вычисления 100 раз
       newX = (int)x/a;// Что за говнокодер это писал... А точно
       if (array[newY][newX] > 0) array[newY][newX] -= 1;
       if (array[newY][newX] == 0) fill(#56814F);

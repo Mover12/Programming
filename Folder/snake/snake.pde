@@ -17,7 +17,7 @@ int array[][]={
   {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, 
 };
 byte a = 45;
-int pozitionX = 12, pozitionY = 7;
+byte pozitionX = 12, pozitionY = 7;
 byte lenght = 4;
 byte mode = 4;
 int newX,newY;
