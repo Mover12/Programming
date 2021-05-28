@@ -46,5 +46,6 @@ void draw() {
     break;
   }
   array[pozitionY][pozitionX] -= 1;
+  if(array[pozitionY][pozitionX] >= 0) exit();
   rendering(); 
 }

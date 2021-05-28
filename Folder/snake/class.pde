@@ -23,5 +23,5 @@ void rendering() {
   }
   fill(255);
   text("Score:",5,38);
-  text(lenght, 145, 40);
+  text(lenght - 1, 145, 40);
 }
