@@ -5,16 +5,17 @@ void keyPressed() {
   else if (mode != 1 && key == 'd') mode = 4;
 }
 void rendering() {
-  for (int y = 0; y < height; y += a) { // а зачем писать в float  а потом переводить в int если можно сразу в int
+  for (int y = 0; y < height; y += a) { 
     for (int x = 0; x < width; x += a) {      
-      newY = y/a;//Зачем повторять одни и теже вычисления 100 раз
-      newX = x/a;// Что за говнокодер это писал... А точно
+      newY = y/a;
+      newX = x/a;
       if (array[newY][newX] > 0) array[newY][newX] -= 1;
       if (array[newY][newX] == 0) fill(#56814F);
-      else if (array[newY][newX] == -2) fill(#4EA52D);
-      else if (array[newY][newX] == -3) {
+      else if (array[newY][newX] == -2) exit();
+      else if (array[newY][newX] == -3) fill(#4EA52D);
+      else if (array[newY][newX] == -4) {
         lenght++; 
-        array[(int)random(1, 14)][(int)random(1, 24)] = -2;
+        array[(int)random(1, 14)][(int)random(1, 24)] = -3;
       }
       else fill(30);      
       rect(x, y, a, a);
