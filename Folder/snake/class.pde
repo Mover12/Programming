@@ -11,9 +11,17 @@ void rendering() {
       newX = x/a;// Что за говнокодер это писал... А точно
       if (array[newY][newX] > 0) array[newY][newX] -= 1;
       if (array[newY][newX] == 0) fill(#56814F);
-      else if (array[newY][newX] == -2) exit();
+      else if (array[newY][newX] == -2) fill(#4EA52D);
+      else if (array[newY][newX] == -3) {
+        lenght++; 
+        array[(int)random(1, 14)][(int)random(1, 24)] = -2;
+      }
       else fill(30);      
       rect(x, y, a, a);
     }
   }
+  fill(255);
+  textAlign(RIGHT);
+  text("Score:",140,38);
+  text(lenght, 200, 40);
 }
