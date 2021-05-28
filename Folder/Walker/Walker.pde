@@ -1,3 +1,4 @@
+int test12;
 PVector loc;
 PVector vel;
 int col =0 ;
