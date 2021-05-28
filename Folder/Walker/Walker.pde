@@ -1,4 +1,4 @@
-int test12;
+int test12;//хуй пизда ебать и блядь в сми нельзя употреблять
 PVector loc;
 PVector vel;
 int col =0 ;
