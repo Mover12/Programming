@@ -22,7 +22,6 @@ void rendering() {
     }
   }
   fill(255);
-  textAlign(RIGHT);
-  text("Score:",140,38);
-  text(lenght, 200, 40);
+  text("Score:",5,38);
+  text(lenght, 145, 40);
 }

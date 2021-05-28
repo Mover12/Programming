@@ -25,6 +25,7 @@ void setup() {
   size(1170, 720);
   frameRate(3);
   textSize(45);
+  textAlign(LEFT);
   //noStroke();
 }
 void draw() {
