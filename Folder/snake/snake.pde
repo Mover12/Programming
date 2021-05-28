@@ -28,7 +28,6 @@ void setup() {
 void draw() {
   array[pozitionY][pozitionX] = lenght;
   keyPressed();
-  rendering();// отрисовка поля
   switch(mode) {
   case 1: 
     pozitionX--;
@@ -44,4 +43,5 @@ void draw() {
     break;
   }
   array[pozitionY][pozitionX] -= 1;
+  rendering();// отрисовка поля
 }
