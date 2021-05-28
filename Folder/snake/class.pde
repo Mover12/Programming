@@ -7,9 +7,11 @@ void keyPressed(){
 void rendering() {
   for (float y = 0; y < height; y += a) {
     for (float x = 0; x < width; x += a) {      
-      if (array[(int)y/a][(int)x/a] > 0) array[(int)y/a][(int)x/a] -= 1;
-      if (array[(int)y/a][(int)x/a] == 0) fill(#56814F);
-      else if (array[(int)y/a][(int)x/a] == -2)exit();
+      newY = (int)y/a;//Зачем повторять дни и теже вычисления 100 раз
+      newX = (int)x/a;// Что за говнокодер это писал... А точно
+      if (array[newY][newX] > 0) array[newY][newX] -= 1;
+      if (array[newY][newX] == 0) fill(#56814F);
+      else if (array[newY][newX] == -2) exit();
       else fill(30);      
       rect(x, y, a, a);
     }
