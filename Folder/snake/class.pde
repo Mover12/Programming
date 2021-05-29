@@ -5,15 +5,15 @@ void keyPressed() {
   else if (mode != 1 && key == 'd') mode = 4;
 }
 void rendering() {
-  for (int y = 0; y < height; y += a) { 
-    for (int x = 0; x < width; x += a) {      
-      newY = y/a;
-      newX = x/a;
-      if (array[newY][newX] > 0) array[newY][newX] -= 1;
-      if (array[newY][newX] == 0) fill(#56814F);
-      else if (array[newY][newX] == -2) died = true;
-      else if (array[newY][newX] == -3) fill(#4EA52D);
-      else if (array[newY][newX] == -4) {
+  for (int y = 0,ny; y < height; y += a) { 
+    for (int x = 0,nx; x < width; x += a) {
+      ny=y/a;
+      nx=x/a;
+      if (array[ny][nx] > 0) array[ny][nx] -= 1;
+      if (array[ny][nx] == 0) fill(#56814F);
+      else if (array[ny][nx] == -2) died = true;
+      else if (array[ny][nx] == -3) fill(#4EA52D);
+      else if (array[ny][nx] == -4) {
         lenght++; 
         array[(int)random(1, 14)][(int)random(1, 24)] = -3;
       }

@@ -59,7 +59,7 @@ void draw() {
       textSize(80);
       text("score: "+(lenght-1), 100, 430);
       textSize(60);
-      text("tap to continue",300,600);
-    }else exit();  
+      text("tap to continue", 300, 600);
+    } else exit();
   }
 }
