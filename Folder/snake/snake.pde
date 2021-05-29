@@ -18,7 +18,7 @@ int array[][]={
 };
 byte a = 45;
 byte pozitionX = 12, pozitionY = 7;
-byte lenght = 1;
+byte lenght = 4;
 byte mode = 4;
 int newX,newY;
 void setup() {
