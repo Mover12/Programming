@@ -22,5 +22,5 @@ void rendering() {
     }
   }
   fill(255);
-  text("Score: "+(lenght-1),5,38);
+  text("Score: "+(lenght - 4),5,38);
 }

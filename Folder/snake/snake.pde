@@ -18,9 +18,8 @@ int array[][]={
 };
 byte a = 45;
 byte pozitionX = 12, pozitionY = 7;
-byte lenght = 1;
+byte lenght = 4;
 byte mode = 4;
-int newX, newY;
 boolean died = false;
 void setup() {
   size(1170, 720);
@@ -57,7 +56,7 @@ void draw() {
       textSize(150);
       text("Game Over", 100, 300);
       textSize(80);
-      text("score: "+(lenght-1), 100, 430);
+      text("score: "+(lenght-4), 100, 430);
       textSize(60);
       text("tap to continue", 300, 600);
     } else exit();
