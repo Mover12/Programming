@@ -20,7 +20,8 @@ byte a = 45;
 byte pozitionX = 12, pozitionY = 7;
 byte lenght = 1;
 byte mode = 4;
-int newX,newY;
+int newX, newY;
+boolean died = false;
 void setup() {
   size(1170, 720);
   frameRate(3);
@@ -30,23 +31,35 @@ void setup() {
   //noStroke();
 }
 void draw() {
-  array[pozitionY][pozitionX] = lenght;
-  keyPressed();
-  switch(mode) {
-  case 1: 
-    pozitionX--;
-    break;
-  case 2:
-    pozitionY--;
-    break;
-  case 3:
-    pozitionY++;
-    break;
-  case 4:
-    pozitionX++;
-    break;
+  if (!died) {
+    array[pozitionY][pozitionX] = lenght;
+    keyPressed();
+    switch(mode) {
+    case 1: 
+      pozitionX--;
+      break;
+    case 2:
+      pozitionY--;
+      break;
+    case 3:
+      pozitionY++;
+      break;
+    case 4:
+      pozitionX++;
+      break;
+    }
+    array[pozitionY][pozitionX] -= 1;
+    if (array[pozitionY][pozitionX] >= 0) died = true;
+    rendering();
+  } else {
+    if (!keyPressed) {
+      background(#56814F);
+      textSize(150);
+      text("Game Over", 100, 300);
+      textSize(80);
+      text("score: "+(lenght-1), 100, 430);
+      textSize(60);
+      text("tap to continue",300,600);
+    }else exit();  
   }
-  array[pozitionY][pozitionX] -= 1;
-  if(array[pozitionY][pozitionX] >= 0) exit();
-  rendering(); 
 }

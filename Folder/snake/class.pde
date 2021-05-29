@@ -11,7 +11,7 @@ void rendering() {
       newX = x/a;
       if (array[newY][newX] > 0) array[newY][newX] -= 1;
       if (array[newY][newX] == 0) fill(#56814F);
-      else if (array[newY][newX] == -2) exit();
+      else if (array[newY][newX] == -2) died = true;
       else if (array[newY][newX] == -3) fill(#4EA52D);
       else if (array[newY][newX] == -4) {
         lenght++; 
@@ -22,6 +22,5 @@ void rendering() {
     }
   }
   fill(255);
-  text("Score:",5,38);
-  text(lenght - 1, 145, 40);
+  text("Score: "+(lenght-1),5,38);
 }
