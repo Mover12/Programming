@@ -61,5 +61,5 @@ void clear() {
   c = false;
 }
 void framerate(int i) {
-  frameRate(i);
+  f = i;
 }

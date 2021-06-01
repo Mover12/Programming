@@ -4,6 +4,7 @@ byte h = 20, w = 30;
 float a = 1057.5/w;
 boolean c = true;
 boolean nr = true;
+int f;
 color menu = 100, life = 0, died = 255, stroke = 100;
 String list[] = {"30x20", "60x40", "120x80"};
 byte neighbour;
@@ -58,8 +59,9 @@ void draw() {
   rect(0, 0, 308.5, height);
   if(nr && mousePressed)paint();
   if (c) {
+    frameRate(f); 
     logic();
     initialization();
-  }
+  } else frameRate(60);
   rendering();
 }
