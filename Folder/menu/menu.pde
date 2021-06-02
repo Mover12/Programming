@@ -1,12 +1,12 @@
 import controlP5.*;
 ControlP5 cp5;
-byte h = 20, w = 30;
+int h = 20, w = 30;
 float a = 1057.5/w;
 boolean c = true;
 boolean nr = true;
 color menu = 100, life = 0, died = 255, stroke = 100;
-String list[] = {"30x20", "60x40", "120x80"};
-byte neighbour;
+String list[] = {"EASY 30x20", "MEDIUM 120x80", "HARD 480x320"};
+int neighbour;
 int array[][]; 
 int bufer[][];
 void setup() {
@@ -19,7 +19,7 @@ void setup() {
   cp5 = new ControlP5(this);
   cp5.setFont(createFont("Calibri", 20));  
 
-  cp5.addScrollableList("size")
+  cp5.addScrollableList("difficulty")
     .setPosition(10, 30)
     .setSize(280, 100)
     .setBarHeight(40)
@@ -30,7 +30,7 @@ void setup() {
     .setSize(100, 20)
     .setPosition(10, 140);
 
-  cp5.addToggle("darktema")
+  cp5.addToggle("thema")
     .setSize(100, 20)
     .setPosition(10, 200);
 

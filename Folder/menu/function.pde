@@ -1,6 +1,6 @@
 void logic() {
-  for (byte x = 0; x < w; x++) {
-    for (byte y = 0; y < h; y++) {
+  for (int x = 0; x < w; x++) {
+    for (int y = 0; y < h; y++) {
       neighbour = 0; 
       for (int nx = x-1; nx <= x+1; nx++) {
         for (int ny = y-1; ny <= y+1; ny++) {  
@@ -18,8 +18,8 @@ void logic() {
   }
 } 
 void initialization() {
-  for (byte x = 0; x < w; x++) {
-    for (byte y = 0; y < h; y++) {
+  for (int x = 0; x < w; x++) {
+    for (int y = 0; y < h; y++) {
       if (bufer[y][x] == 3)array[y][x]=1;
       else if (bufer[y][x] == 2 && array[y][x] == 1)array[y][x]=1;
       else array[y][x] = 0;
@@ -27,8 +27,8 @@ void initialization() {
   }
 }
 void rendering() {
-  for (byte x = 0; x < w; x++) {
-    for (byte y = 0; y < h; y++) {
+  for (int x = 0; x < w; x++) {
+    for (int y = 0; y < h; y++) {
       if (array[y][x] == 1) fill(life);
       else fill(died);
       square((x*a)+308.5, y*a, a);

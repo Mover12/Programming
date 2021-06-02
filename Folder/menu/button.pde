@@ -1,4 +1,4 @@
-void size(int s) {
+void difficulty(int s) {
   switch(s) {
   case 0: 
     h = 20; 
@@ -8,15 +8,15 @@ void size(int s) {
     bufer = new int [h][w];
     break;
   case 1: 
-    h = 40; 
-    w = 60; 
+    h = 80; 
+    w = 120; 
     a = 1057.5/w;
     array = new int[h][w];
     bufer = new int [h][w];
     break;
   case 2: 
-    h = 80; 
-    w = 120; 
+    h = 320; 
+    w = 480; 
     a = 1057.5/w;
     array = new int[h][w];
     bufer = new int [h][w];
@@ -27,7 +27,7 @@ void grid(boolean g) {
   if (g)stroke(stroke);
   else noStroke();
 }
-void darktema(boolean d) {
+void thema(boolean d) {
   if (d) {
     life = #048B05; 
     died = 0;
@@ -45,8 +45,8 @@ void darktema(boolean d) {
 void random(boolean r) {
   if (r) {
     nr = false;
-    for (byte x = 0; x < w; x++) {
-      for (byte y = 0; y < h; y++) {
+    for (int x = 0; x < w; x++) {
+      for (int y = 0; y < h; y++) {
         array[y][x]=(int)random(2);
       }
     }
