@@ -4,6 +4,7 @@ int h = 20, w = 30;
 float a = 1057.5/w;
 boolean c = true;
 boolean nr = true;
+int f;
 color menu = 100, life = 0, died = 255, stroke = 100;
 String list[] = {"EASY 30x20", "MEDIUM 120x80", "HARD 480x320"};
 int neighbour;
@@ -58,8 +59,9 @@ void draw() {
   rect(0, 0, 308.5, height);
   if(nr && mousePressed)paint();
   if (c) {
+    frameRate(f); 
     logic();
     initialization();
-  }
+  } else frameRate(60);
   rendering();
 }
