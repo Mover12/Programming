@@ -1,5 +1,6 @@
 #Посчитайте, сколько раз символ встречается в строке.
-#Test2
+#Test
+#ВЕТВИ УРЯ!!!!! 
 text = "lhsijoijslll"
 times = 0
 for l in text:
